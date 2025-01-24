@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ 18.12.1 ]
+        node: [ 22.13.0 ]
     name: Node ${{ matrix.node }} sample
     steps:
       - uses: actions/checkout@v3
@@ -47,7 +47,7 @@ jobs:
         run: |
           # rm -rf node_modules/ pnpm-lock.yaml
           pnpm install
-          pnpm install postcss@^8 webpack@^4.0.0
+          # pnpm install postcss@^8 webpack@^4.0.0
 
       - name: Build artifacts
         run: |
